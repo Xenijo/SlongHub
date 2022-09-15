@@ -1,3 +1,6 @@
+--//If you know the owner of this, i will cred him 
+
+
 --// Setting start time
 local startTime = tick()
 

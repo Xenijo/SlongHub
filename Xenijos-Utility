@@ -129,4 +129,3 @@ end
 function unloopbringall()
 _G.LoopBring = false 
 end
-tp(localRoot,game:GetService("Workspace").Cashiers["CA$HIER"].Open)

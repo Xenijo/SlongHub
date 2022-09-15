@@ -19,6 +19,10 @@ function Reset()
 hum.Health = 0
 end
 
+function BypassReset()
+print("soon")
+end
+
 function setspeed(value)
 hum.WalkSpeed = value
 end

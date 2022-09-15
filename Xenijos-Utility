@@ -12,7 +12,7 @@ function prompt(path,Matss)
 end
 
 function tp(from,to)
-from = to 
+from.CFrame = to.CFrame
 end
 
 function Tween(instance, duration, properties, waituntildone, optionalproperties)

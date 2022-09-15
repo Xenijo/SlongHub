@@ -1,0 +1,38 @@
+--//vars
+local TweenService = game:getService("TweenService")
+local Players = game:GetService("Players")
+
+
+function Click(path,Mats)
+ fireclickdetector(path,Mats or math.huge)
+end
+
+function prompt(path,Matss)
+ fireproximityprompt(path,Matss or math.huge)
+end
+
+function tp(from,to)
+from = to 
+end
+
+function Tween(instance, duration, properties, waituntildone, optionalproperties)
+    local waituntildone = waituntildone or false
+    local optionalproperties = optionalproperties or {Enum.EasingDirection.Out, Enum.EasingStyle.Linear}
+    local Tween = TweenService:Create(instance, TweenInfo.new(duration), properties, unpack(optionalproperties))
+    Tween:Play()
+    if waituntildone == true then
+        Tween.Completed:Wait()
+        return true
+    end
+end
+
+
+function MagTeleport(pos, tpspeed, who)
+    local tpspeed = tpspeed or 0
+    local who = who 
+    local twn = TweenService:Create(who, TweenInfo.new((pos - who.Position).Magnitude / tpspeed, Enum.EasingStyle.Linear), {CFrame = CFrame.new(pos)})
+    twn:Play()
+    twn.Completed:Wait()
+end
+
+

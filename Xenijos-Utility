@@ -1,7 +1,7 @@
 --//vars
 local TweenService = game:getService("TweenService")
-local Players = game:GetService("Players")
-local lolplr =  Players.LocalPlayer
+local slayers = game:GetService("Players")
+local lolplr =  slayers.LocalPlayer
 local hum = lolplr.Character.Humanoid
 local humpart = lolplr.Character.HumanoidRootPart
 local localRoot = lolplr.Character:FindFirstChild("HumanoidRootPart")

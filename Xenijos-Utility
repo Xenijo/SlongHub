@@ -1,9 +1,8 @@
 --//vars
 local TweenService = game:getService("TweenService")
-local slayers = game:GetService("Players")
-local lolplr =  slayers.LocalPlayer
+local Players = game:GetService("Players")
+local lolplr =  Players.LocalPlayer
 local hum = lolplr.Character.Humanoid
-local humpart = lolplr.Character.HumanoidRootPart
 local localRoot = lolplr.Character:FindFirstChild("HumanoidRootPart")
 local IgnoreParts = {}
 getgenv().Status = nil --idk why i used that
@@ -52,10 +51,6 @@ function GetHumanoid(plr)
     if Char then
         return Char:WaitForChild("Humanoid")
     end    
-end
-
-function tp(item,to)
-item.CFrame = to.CFrame
 end
 
 function Tween(instance, duration, properties, waituntildone, optionalproperties)
@@ -134,3 +129,4 @@ end
 function unloopbringall()
 _G.LoopBring = false 
 end
+tp(localRoot,game:GetService("Workspace").Cashiers["CA$HIER"].Open)

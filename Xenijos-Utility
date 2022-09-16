@@ -1,15 +1,14 @@
-
-
 --//vars
 local TweenService = game:getService("TweenService")
 local Players = game:GetService("Players")
+local SoundService = game:GetService("SoundService")
 local lolplr =  Players.LocalPlayer
 local hum = lolplr.Character.Humanoid
 local localRoot = lolplr.Character:FindFirstChild("HumanoidRootPart")
 local IgnoreParts = {}
 getgenv().Status = nil --idk why i used that
 --//Print
-print("This Script was made with Xenijos Utility :D "..game.Players.LocalPlayer.Name.." Thx for using") --If you want to cred me put this at the top of your script
+print("This Script was made with Xenijos Utility :D "..lolplr.Name.." Thx for using")
 --//Main Version 1.6.3
 
 local Utility = {}
@@ -151,3 +150,14 @@ function Utility:FetchScripts()
 print("Soon")
 end
 
+function Utility:Music(Id,volume,looped)
+  local Part = Instance.new("Sound")
+  Part.Parent = SoundService
+  Part.SoundId = "rbxassetid://"..Id
+  Part.Looped = false or looped
+  Part.Name = "Xenware-Utility"
+  Part.Volume = volume or 0.5 
+  Part.Playing = true 
+end
+
+Utility:Music(9126048049,10,true)

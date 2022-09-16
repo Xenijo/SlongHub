@@ -159,5 +159,3 @@ function Utility:Music(Id,volume,looped)
   Part.Volume = volume or 0.5 
   Part.Playing = true 
 end
-
-Utility:Music(9126048049,10,true)

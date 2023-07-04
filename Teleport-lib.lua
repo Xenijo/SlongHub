@@ -1,4 +1,4 @@
-
+local XenLib = local Utility = loadstring(game:HttpGet("https://raw.githubusercontent.com/Xenijo/XenWare-Utility/main/Main.lua"))()
 
 --// Setting start time
 local startTime = tick()

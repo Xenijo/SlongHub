@@ -63,14 +63,6 @@ function Module:Tween_Teleport(Destinition_Vector3, heart)
         heart:FindFirstChildWhichIsA("BodyVelocity"):Destroy()
     end
 
-    --local ValueChanger = Instance.new("Vector3Value")
-    --ValueChanger.Value = currentPosition
-
-    --ValueChanger.Changed:Connect(function()
-        --if player:DistanceFromCharacter(ValueChanger.Value) >= .05 then
-            --character:SetPrimaryPartCFrame(CFrame.new(ValueChanger.Value))
-        --end
-    --end)
 
     local BodyVel = Instance.new("BodyVelocity", heart)
     BodyVel.MaxForce = Vector3.new(9e9, 9e9, 9e9)
@@ -87,16 +79,6 @@ function Module:Tween_Teleport(Destinition_Vector3, heart)
     if cloned then
         cloned.Parent = heart
     end
-    --local nograv = Instance.new("BodyVelocity", player.Character.HumanoidRootPart)
-    --nograv.MaxForce = Vector3.new(9e+09, 9e+09, 9e+09)
-    --nograv.Velocity = Vector3.new(0, 0, 0)
-    --nograv.P = 1250
-    --local ograv = workspace.Gravity
-    --workspace.Gravity = 0
-    --local temporaryTween = TweenService:Create(ValueChanger, TweenInfo.new( (Destinition_Vector3 - currentPosition).Magnitude / Settings.Tween_Speed, Enum.EasingStyle.Linear), {Value = Destinition_Vector3})
-    --temporaryTween:Play()
-    --temporaryTween.Completed:Wait()
-
 end
 function Module:Walk_Teleport(Destinition_Vector3)
     local oldSpeed = character:WaitForChild("Humanoid").WalkSpeed

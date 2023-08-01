@@ -1,0 +1,51 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stang001/Janslib/main/Library.lua"))()
+
+Library:CreateWatermark("XenWare {game} {fps}")
+
+local Window = Library:CreateWindow("Xenjio",Vector2.new(500,600))
+
+local MainTab = Window:CreateTab("AutoFarm")
+
+local SectoreLeft = MainTab:CreateSector("AutoFarms","Left")
+
+SectoreLeft:AddButton("Cock",function()
+print("Gay")
+end)
+
+SectoreLeft:AddLabel("Balls")
+
+
+local cocktoggle = SectoreLeft:AddToggle("CockSuckToggle",false,function(state)
+print(state)
+end)
+cocktoggle:AddTextbox("IloveMan",function()
+end)
+cocktoggle:AddColorpicker(Color3.fromRGB(255, 255, 255),function(...)
+print(...)
+end)
+cocktoggle:AddSlider(16,16,250,1,function(...)
+print(...)
+end)
+
+local GayTable = {"Balls","Cocks"}
+local Drop = SectoreLeft:AddDropdown("Balls",false,false,function(...)
+print(...)
+end)   
+for i,v in pairs(GayTable) do 
+Drop:Add(v)
+end
+
+SectoreLeft:AddSlider("Speed",16,16,250,1,function(...)
+
+end)
+
+local Picker = SectoreLeft:AddColorpicker("balls",Color3.fromRGB(255, 255, 255),function()
+
+end)
+Picker:AddDropdown(GayTable,false,false,function(...)
+
+end)
+
+SectoreLeft:AddKeybind("Balls","None",function(...)
+
+end)
